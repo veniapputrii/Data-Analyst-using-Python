@@ -44,7 +44,7 @@ with col1 :
     min_count = st.sidebar.slider('Jumlah Minimal Pembeli', min_value=0, max_value=by_customer['count'].max(), value=0)
     filtered_cities = by_customer[by_customer['count'] >= min_count]['customer_city']
 
-    # Tampilkan informasi di main area
+    # Menampilkan informasi di main area
     st.write(f"Menampilkan kota dengan setidaknya {min_count} pembeli:")
     #st.write(filtered_cities)
     st.dataframe(filtered_cities)
